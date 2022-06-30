@@ -5,7 +5,7 @@ class Weapon:
     
     def weapon_details(self):
         self.name = 'Mega Sword'
-        self.attack_power = 25
+        self.attack_power = 40
 
     
 
