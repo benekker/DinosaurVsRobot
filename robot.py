@@ -7,5 +7,8 @@ class Robot:
 
     #returning to this function later on
     def attack(self, dinosaur):
-        print(f'{self.name} attacked {dinosaur.name} and dealt 40 damage with a Mega Sword!')
-        dinosaur.health -= 40
+        print(f'{self.name} attacked {dinosaur} and dealt 40 damage with a Mega Sword!')
+        
+
+
+
