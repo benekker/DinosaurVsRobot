@@ -3,11 +3,9 @@ class Robot:
     def __init__(self, name):
         self.name = name
         self.health = 100
-        self.active_weapon = Weapon()
-
-    def robot_details(self):
-        self.name = 'WALL-E'
+        self.active_weapon = Weapon('Mega Sword', 40)
 
     #returning to this function later on
     def attack(self, dinosaur):
-        pass
+        print(f'{self.name} attacked {dinosaur.name} and dealt 40 damage with a Mega Sword!')
+        dinosaur.health -= 40

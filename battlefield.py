@@ -3,14 +3,14 @@ from robot import Robot
 
 class Battlefield:
     def __init__(self):
-        self.player_1 = Dinosaur()
-        self.player_2 = Robot()
+        self.dino = Dinosaur('Mr. T', 25)
+        self.robo = Robot('WALL-E')
 
     def run_game(self):
         pass
 
     def display_welcome(self):
-        pass
+        print('Welcome...TO DINOSAUR VS ROBOT!!!')
 
     def battle_phase(self):
         pass
