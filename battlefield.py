@@ -22,24 +22,14 @@ class Battlefield:
         print("")
 
     def battle_phase(self):
-        while self.run == True:
-            if dino.health > 0:
-                robo.attack(dino.name)
-                dino.health -= robo.active_weapon.attack_power
-                print(f'{dino.name} has {dino.health} health remaining!')
-                print("")
-                if dino.health <= 0:
+        while dino.health > 0 and robo.health > 0:
+                robo.assign_weapon()
+                robo.attack(dino)
+                dino.attack(robo)
+                if robo.health == 0 or dino.health == 0:
                     break
-            if robo.health > 0:
-                dino.attack(robo.name)
-                robo.health -= dino.attack_power
-                print(f'{robo.name} has {robo.health} health remaining!')
-                print("")
-                if robo.health <= 0:
-                    break
-            else:
-                self.run = False
 
+        
 
     def display_winner(self):
         if robo.health <= 0:

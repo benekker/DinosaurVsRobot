@@ -10,8 +10,7 @@ class Robot:
         self.health = 100
         self.active_weapon = Weapon('Mega Sword', 40)
 
-    #returning to this function later on
-    def attack(self, dinosaur):
+    def assign_weapon(self):
         print(f'{self.name} you get 3 weapon choices.')
         print("Enter 1 for MegaSword, Enter 2 for Bow n' Arrow, Enter 3 for Asteroid")
         user_input = int(input(f'Which weapon would you like to attack with?: '))
@@ -22,8 +21,15 @@ class Robot:
             self.active_weapon = bow_arrow
         elif user_input == 3:
             self.active_weapon = asteroid
-        print(f'{self.name} attacked {dinosaur} and dealt {self.active_weapon.attack_power} damage with a {self.active_weapon.name}')
+    
+    def attack(self, dinosaur):
         
+        print(f'{self.name} attacked {dinosaur.name} and dealt {self.active_weapon.attack_power} damage with a {self.active_weapon.name}')
+        dinosaur.health -= self.active_weapon.attack_power
+        print(f'{dinosaur.name} has {dinosaur.health} health remaining!')
+        print("")
+
+    
 
 
 
