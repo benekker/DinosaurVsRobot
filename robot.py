@@ -1,6 +1,6 @@
 from weapon import Weapon
-MegaSword = Weapon('MegaSword', 40)
-bow_arrow = Weapon("Bow n' Arrow", 30)
+MegaSword = Weapon('MegaSword', 30)
+bow_arrow = Weapon("Bow n' Arrow", 15)
 asteroid = Weapon("Asteroid", 100)
 
 
@@ -14,7 +14,8 @@ class Robot:
     def attack(self, dinosaur):
         print(f'{self.name} you get 3 weapon choices.')
         print("Enter 1 for MegaSword, Enter 2 for Bow n' Arrow, Enter 3 for Asteroid")
-        user_input = int(input(f'Please select your weapon: '))
+        user_input = int(input(f'Which weapon would you like to attack with?: '))
+        print("")
         if user_input == 1:
             self.active_weapon = MegaSword
         elif user_input == 2:

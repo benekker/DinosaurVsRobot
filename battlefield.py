@@ -14,10 +14,12 @@ class Battlefield:
         self.display_winner()
 
     def display_welcome(self):
-        print('Welcome...TO DINOSAUR VS ROBOT!!!')
-        print("Today we have two new challengers...")
+        print("")
+        print('\nWelcome...TO DINOSAUR VS ROBOT!!!\nToday we have two new challengers...')
+        print("")
         print(f"In the red corner itsss {robo.name} the robot!!")
         print(f"And fighting out of the blue corner itsss {dino.name} the dino!")
+        print("")
 
     def battle_phase(self):
         while self.run == True:
@@ -25,12 +27,14 @@ class Battlefield:
                 robo.attack(dino.name)
                 dino.health -= robo.active_weapon.attack_power
                 print(f'{dino.name} has {dino.health} health remaining!')
+                print("")
                 if dino.health <= 0:
                     break
             if robo.health > 0:
                 dino.attack(robo.name)
                 robo.health -= dino.attack_power
                 print(f'{robo.name} has {robo.health} health remaining!')
+                print("")
                 if robo.health <= 0:
                     break
             else:
