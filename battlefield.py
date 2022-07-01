@@ -25,7 +25,6 @@ class Battlefield:
                 robo.attack(dino.name)
                 dino.health -= robo.active_weapon.attack_power
                 print(f'{dino.name} has {dino.health} health remaining!')
-                
                 if dino.health <= 0:
                     break
             if robo.health > 0:

@@ -10,17 +10,6 @@ class Robot:
         self.health = 100
         self.active_weapon = Weapon('Mega Sword', 40)
 
-    def get_active_weapon(self):
-        print(f'{self.name} you get 3 weapon choices.')
-        print("Enter 1 for MegaSword, Enter 2 for Bow n' Arrow, Enter 3 for Asteroid")
-        user_input = int(input(f'Please select your weapon: '))
-        if user_input == 1:
-            self.active_weapon = MegaSword
-        elif user_input == 2:
-            self.active_weapon = bow_arrow
-        elif user_input == 3:
-            self.active_weapon = asteroid
-
     #returning to this function later on
     def attack(self, dinosaur):
         print(f'{self.name} you get 3 weapon choices.')
