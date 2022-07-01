@@ -6,3 +6,4 @@ class Dinosaur:
 
     def attack(self, robot):
         print(f'{self.name} attacked {robot} and dealt {self.attack_power} damage!')
+        
